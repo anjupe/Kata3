@@ -11,8 +11,11 @@ import org.jfree.ui.ApplicationFrame;
 
 public class HistogramDisplay extends ApplicationFrame{
 
-    public HistogramDisplay() { 
+    private final Histogram<String> histogram;
+    
+    public HistogramDisplay(Histogram<String> histogram) { 
         super("Histograma de emails");
+        this.histogram = histogram;
         setContentPane(createPanel());
         pack();
     }
